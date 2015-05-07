@@ -22,6 +22,7 @@ object F_menuMestre: TF_menuMestre
     Height = 42
     Caption = 'Ficha do personagem'
     Flat = True
+    OnClick = sbtnFichaPersonClick
   end
   object sbtnTestes: TSpeedButton
     Left = 104
@@ -38,6 +39,7 @@ object F_menuMestre: TF_menuMestre
     Height = 42
     Caption = 'Criar Mapas'
     Flat = True
+    OnClick = sbtnMapasClick
   end
   object sbtnAventuras: TSpeedButton
     Left = 104
@@ -72,5 +74,12 @@ object F_menuMestre: TF_menuMestre
     Height = 42
     Caption = 'Iniciar Combate'
     Flat = True
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 512
+    Top = 291
+    Width = 97
+    Height = 57
+    OnClick = SpeedButton1Click
   end
 end

@@ -19,7 +19,9 @@ object D_modulo: TD_modulo
     Top = 16
   end
   object mySql_link: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\Users\davidSimoes\Desktop\FACI RPG v1.4\libmySQL.dll'
+    VendorLib = 
+      'C:\Users\Gabao\Documents\GitHub\TCC-Desenvolvimento\FACI RPG\lib' +
+      'mySQL.dll'
     Left = 136
     Top = 16
   end
@@ -88,7 +90,6 @@ object D_modulo: TD_modulo
     end
   end
   object TB_personagem: TFDTable
-    Active = True
     IndexFieldNames = 'person_ID'
     Connection = conexao
     UpdateOptions.UpdateTableName = 'faci_rpg.personagem'
@@ -156,7 +157,6 @@ object D_modulo: TD_modulo
     end
   end
   object SQL_personagem: TFDQuery
-    Active = True
     Connection = conexao
     SQL.Strings = (
       'select * from personagem')
@@ -207,6 +207,7 @@ object D_modulo: TD_modulo
       FieldName = 'person_ID'
       Origin = 'person_ID'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object SQL_personagemperson_campId: TLongWordField
       FieldName = 'person_campId'

@@ -14,7 +14,8 @@ uses
   U_Login in 'Fontes\U_Login.pas' {F_login},
   U_funcoes in 'Fontes\U_funcoes.pas',
   U_npc in 'Fontes\U_npc.pas',
-  U_campanha in 'Fontes\U_campanha.pas' {F_campanha};
+  U_campanha in 'Fontes\U_campanha.pas' {F_campanha},
+  U_limite in 'Fontes\U_limite.pas' {F_limite};
 
 {$R *.res}
 
@@ -44,6 +45,7 @@ begin
   // Criar Form principal
   Application.CreateForm(TD_modulo, D_modulo);
   Application.CreateForm(TF_login, F_login);
+  Application.CreateForm(TF_limite, F_limite);
   // Application.CreateForm(TF_splashScreen, F_splashScreen);
   F_splashScreen.Hide;
   F_splashScreen.pgb_splashScreen.Free;

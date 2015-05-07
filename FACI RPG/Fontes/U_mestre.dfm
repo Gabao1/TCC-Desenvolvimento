@@ -28,6 +28,7 @@ object F_Mestre: TF_Mestre
     Font.Name = 'Comic Sans MS'
     Font.Style = [fsBold]
     ParentFont = False
+    OnClick = sbtnNovoJogoClick
   end
   object sbtnJogoSalvo: TSpeedButton
     Left = 64

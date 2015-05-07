@@ -157,41 +157,41 @@ object F_Personagem: TF_Personagem
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
   end
-  object SpeedButton1: TSpeedButton
-    Left = 229
-    Top = 465
+  object spb_salvar: TSpeedButton
+    Left = 237
+    Top = 514
     Width = 92
     Height = 42
     Action = DatasetInsert1
     Caption = 'NOVO'
   end
   object SpeedButton2: TSpeedButton
-    Left = 343
-    Top = 465
+    Left = 351
+    Top = 514
     Width = 92
     Height = 42
     Action = DatasetEdit1
     Caption = 'EDITAR'
   end
   object SpeedButton3: TSpeedButton
-    Left = 449
-    Top = 465
+    Left = 457
+    Top = 514
     Width = 92
     Height = 42
     Action = DatasetPost1
     Caption = 'SALVAR'
   end
   object SpeedButton4: TSpeedButton
-    Left = 555
-    Top = 465
+    Left = 563
+    Top = 514
     Width = 92
     Height = 42
     Action = DatasetDelete1
     Caption = 'DELETAR'
   end
   object SpeedButton5: TSpeedButton
-    Left = 661
-    Top = 465
+    Left = 669
+    Top = 514
     Width = 92
     Height = 42
     Action = DatasetCancel1
@@ -217,6 +217,46 @@ object F_Personagem: TF_Personagem
     Top = 64
     Width = 481
     Height = 163
+  end
+  object spb_inicairCalculo: TSpeedButton
+    Left = 229
+    Top = 368
+    Width = 76
+    Height = 27
+    Caption = 'Calcular'
+    OnClick = spb_inicairCalculoClick
+  end
+  object Label11: TLabel
+    Left = 332
+    Top = 343
+    Width = 77
+    Height = 19
+    Caption = '1'#186' n'#250'mero'
+    Visible = False
+  end
+  object Label12: TLabel
+    Left = 440
+    Top = 343
+    Width = 77
+    Height = 19
+    Caption = '2'#186' n'#250'mero'
+    Visible = False
+  end
+  object Label13: TLabel
+    Left = 539
+    Top = 343
+    Width = 77
+    Height = 19
+    Caption = '3'#186' n'#250'mero'
+    Visible = False
+  end
+  object spb_calcular: TSpeedButton
+    Left = 648
+    Top = 343
+    Width = 65
+    Height = 52
+    Caption = 'Calcular'
+    OnClick = spb_calcularClick
   end
   object DBEdit1: TDBEdit
     Left = 16
@@ -279,6 +319,7 @@ object F_Personagem: TF_Personagem
     Height = 27
     DataField = 'person_pontosVida'
     DataSource = DS_cadastroPersonagem
+    Enabled = False
     TabOrder = 6
   end
   object DBEdit8: TDBEdit
@@ -288,6 +329,7 @@ object F_Personagem: TF_Personagem
     Height = 27
     DataField = 'person_pontosMagia'
     DataSource = DS_cadastroPersonagem
+    Enabled = False
     TabOrder = 7
   end
   object DBEdit9: TDBEdit
@@ -297,6 +339,7 @@ object F_Personagem: TF_Personagem
     Height = 27
     DataField = 'person_XP'
     DataSource = DS_cadastroPersonagem
+    Enabled = False
     TabOrder = 8
   end
   object DBEdit10: TDBEdit
@@ -306,11 +349,39 @@ object F_Personagem: TF_Personagem
     Height = 27
     DataField = 'person_pontosJogador'
     DataSource = DS_cadastroPersonagem
+    Enabled = False
     TabOrder = 9
   end
+  object Edit1: TEdit
+    Left = 332
+    Top = 368
+    Width = 77
+    Height = 27
+    TabOrder = 10
+    Text = 'Edit1'
+    Visible = False
+  end
+  object Edit2: TEdit
+    Left = 440
+    Top = 368
+    Width = 77
+    Height = 27
+    TabOrder = 11
+    Text = 'Edit1'
+    Visible = False
+  end
+  object Edit3: TEdit
+    Left = 539
+    Top = 368
+    Width = 77
+    Height = 27
+    TabOrder = 12
+    Text = 'Edit1'
+    Visible = False
+  end
   object ACM_personagem: TActionManager
-    Left = 528
-    Top = 392
+    Left = 376
+    Top = 608
     StyleName = 'Platform Default'
     object DatasetInsert1: TDataSetInsert
       Category = 'Dataset'
@@ -344,9 +415,9 @@ object F_Personagem: TF_Personagem
     end
   end
   object DS_cadastroPersonagem: TDataSource
-    DataSet = D_modulo.SQL_personagem
-    Left = 384
-    Top = 400
+    DataSet = D_modulo.TB_personagem
+    Left = 256
+    Top = 608
   end
   object person_abrirFoto: TOpenPictureDialog
     FileName = 'C:\Users\davidSimoes\Pictures\12.jpg'
